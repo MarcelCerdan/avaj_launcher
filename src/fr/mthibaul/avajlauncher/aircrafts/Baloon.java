@@ -11,4 +11,8 @@ public class Baloon extends Aircraft {
 	public void updateConditions() {
 		
 	}
+
+	public String getType() {
+		return ("Baloon");
+	}
 }

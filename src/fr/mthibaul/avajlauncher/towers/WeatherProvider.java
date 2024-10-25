@@ -4,13 +4,13 @@ import fr.mthibaul.avajlauncher.Coordinates;
 
 public class WeatherProvider {
 
-	private String[][][] weather;
+	private String[] weather = {"RAIN", "FOG", "SUN", "SNOW"};
 
-	private WeatherProvider() {
-
-	}
+	private WeatherProvider() {}
 
 	public String getCurrentWeather(Coordinates p_coordinates) {
-		return weather[p_coordinates.getLongitude()][p_coordinates.getLatitude()][p_coordinates.getHeight()];
+		int weatherValue = p_coordinates.getLatitude() + p_coordinates.getLongitude() + p_coordinates.getHeight();
+
+		return weather[weatherValue % 4];
 	}
 }

@@ -12,4 +12,8 @@ public class Helicopter extends Aircraft {
 		
 	}
 
+	public String getType() {
+		return ("Helicopter");
+	}
+
 }
