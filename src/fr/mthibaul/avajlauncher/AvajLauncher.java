@@ -19,7 +19,7 @@ public class AvajLauncher {
 		if (lines == null)
 			return;
 		
-		initWeatherTower(lines);
+		initFlyables(lines);
 		
 		for (int i = 0; i < runNb; i++) {
 
@@ -28,17 +28,11 @@ public class AvajLauncher {
 	}
 
 	private static void initWeatherTower(List<String> lines) {
-		ArrayList<Flyable> flyables = initFlyables(lines);
 
-		for (Flyable flyable : flyables) {
-			if (flyable.getHeight() > 0)
-				flyable.registerTower(tower);
-		}
 	}
 
-	private static ArrayList<Flyable> initFlyables(List<String> lines) {
+	private static void initFlyables(List<String> lines) {
 		runNb = Integer.parseInt(lines.get(0));
-		ArrayList<Flyable> flyables = new ArrayList<>();
 
 		AircraftFactory aircraftFactory = AircraftFactory.getInstance();
 
@@ -48,13 +42,12 @@ public class AvajLauncher {
 			int height = Integer.parseInt(splitedLine[4]);
 			if (height > 100)
 				height = 100;
-			else if (height < 0)
-				height = 0;
-			Coordinates coordinates = new Coordinates(Integer.parseInt(splitedLine[2]), Integer.parseInt(splitedLine[3]), height);
-			flyables.add(aircraftFactory.newAircraft(splitedLine[0], splitedLine[1], coordinates));
+			if (height > 0) {
+				Coordinates coordinates = new Coordinates(Integer.parseInt(splitedLine[2]), Integer.parseInt(splitedLine[3]), height);
+				Flyable flyable = aircraftFactory.newAircraft(splitedLine[0], splitedLine[1], coordinates);
+				flyable.registerTower(tower);
+			}
 		}
-
-		return flyables;
 	}
 
 
