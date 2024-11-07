@@ -1,10 +1,8 @@
 package fr.mthibaul.avajlauncher;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import fr.mthibaul.avajlauncher.aircrafts.*;
 import fr.mthibaul.avajlauncher.towers.*;
+import java.util.List;
 
 public class AvajLauncher {
 	private static int runNb;
@@ -13,6 +11,11 @@ public class AvajLauncher {
 	
 	public static void main(String[] args) {
 		FileChecker fileChecker = new FileChecker();
+
+		if (args.length != 1) {
+			System.out.println("Please input a valid scenario file as argument and nothing else.");
+			System.exit(1);
+		}
 
 		List<String> lines = fileChecker.checkFile(args[0]);
 		
