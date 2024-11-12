@@ -25,12 +25,9 @@ public class AvajLauncher {
 		initFlyables(lines);
 		
 		for (int i = 0; i < runNb; i++) {
-
+			tower.changeWeather();
+			tower.removeUnregistered();
 		}
-
-	}
-
-	private static void initWeatherTower(List<String> lines) {
 
 	}
 
