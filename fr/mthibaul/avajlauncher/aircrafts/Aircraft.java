@@ -31,6 +31,12 @@ public class Aircraft {
 		if (newHeight > 100)
 			newHeight = 100;
 		
+		if (newLatitude < 0)
+			newLatitude = 0;
+		
+		if (newLongitude < 0)
+			newLongitude = 0;
+		
 		if (newHeight <= 0)
 			throw new HeightBelowMinimumException();
 
