@@ -6,7 +6,7 @@ import java.util.List;
 
 public class AvajLauncher {
 	private static int runNb;
-	private static WeatherTower tower = new WeatherTower();
+	private static final WeatherTower tower = new WeatherTower();
 
 	
 	public static void main(String[] args) {
