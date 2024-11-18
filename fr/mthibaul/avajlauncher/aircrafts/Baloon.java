@@ -26,19 +26,19 @@ public class Baloon extends Aircraft implements Flyable {
 			switch (weather) {
 				case "SUN" -> {
 					updateCoord(2, 0, 4);
-					System.out.println(getFullId() + ": It's sunny !");
+					System.out.println(getFullId() + ": Perfect day for a balloon adventure! Unless you’re scared of UV rays...");
 					}
 				case "RAIN" -> {
 					updateCoord(0, 0, -5);
-					System.out.println(getFullId() + ": It's raining :(");
+					System.out.println(getFullId() + ": Rain is here! Hope your balloon is waterproof—nobody likes a soggy landing.");
 					}
 				case "FOG" -> {
 					updateCoord(0, 0, -3);
-					System.out.println(getFullId() + ": It's foggy :o");
+					System.out.println(getFullId() + ": Visibility: practically zero. Time to pretend you’re a ghost ship of the skies!");
 					}
 				default -> {
 					updateCoord(0, 0, -15);
-					System.out.println(getFullId() + ": OMG it's snowing !!");
+					System.out.println(getFullId() + ": It’s snowing, and your balloon is now a flying snow globe! Watch out for penguins.");
 					}
 				}	
 		}
