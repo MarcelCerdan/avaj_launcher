@@ -1,6 +1,6 @@
 # Avaj-Launcher ✈️☁️
 
-**Avaj-Launcher** is the first project in the Java branch at École 42. It is a flight simulation system based on a weather notification engine, specifically designed to introduce **Object-Oriented Programming (OOP)** and the implementation of specific **Design Patterns**.
+**Avaj-Launcher** is the first project in the Java branch at 42 School. It is a flight simulation system based on a weather notification engine, specifically designed to introduce **Object-Oriented Programming (OOP)** and the implementation of specific **Design Patterns**.
 
 ## 📌 Project Overview
 
