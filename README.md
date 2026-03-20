@@ -1,3 +1,5 @@
+![Grade](https://img.shields.io/badge/Grade-125%2F100-brightgreen)
+
 # Avaj-Launcher ✈️☁️
 
 **Avaj-Launcher** is the first project in the Java branch at 42 School. It is a flight simulation system based on a weather notification engine, specifically designed to introduce **Object-Oriented Programming (OOP)** and the implementation of specific **Design Patterns**.
@@ -58,9 +60,9 @@ Helicopter H1 50 50 50
 ```
 
 ### 🛠️ Project Structure
-* Interfaces: Flyable, WeatherTower.
-* Core Logic: WeatherProvider, AircraftFactory.
-* Aircraft Classes: Aircraft (Abstract), Baloon, JetPlane, Helicopter.
+* Interfaces: `Flyable`, `WeatherTower`.
+* Core Logic: `WeatherProvider`, `AircraftFactory`.
+* Aircraft Classes: `Aircraft` (Abstract), `Baloon`, `JetPlane`, `Helicopter`.
 * Main: Handles file I/O, parsing, and simulation loop.
 
 ### 💡 Features & Bonuses
