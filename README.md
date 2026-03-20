@@ -1,4 +1,5 @@
 ![Grade](https://img.shields.io/badge/Grade-125%2F100-brightgreen)
+![Language](https://img.shields.io/badge/Language-Java-orange)
 
 # Avaj-Launcher ✈️☁️
 
